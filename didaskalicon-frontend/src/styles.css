@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+} 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgb(21, 24, 24);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(23, 87, 107);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(43, 168, 206);
+}
+
+
+@font-face {
+    font-family: inconsolata;
+    src: url('assets/fonts/Inconsolata/inconsolata.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: merriweather-black;
+    src: url('assets/fonts/Merriweather/Merriweather-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: merriweather-black-italic;
+    src: url('assets/fonts/Merriweather/Merriweather-BlackItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: merriweather-bold;
+    src: url('assets/fonts/Merriweather/Merriweather-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: merriweather-bold-italic;
+    src: url('assets/fonts/Merriweather/Merriweather-BoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: merriweather-italic;
+    src: url('assets/fonts/Merriweather/Merriweather-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: merriweather-light;
+    src: url('assets/fonts/Merriweather/Merriweather-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: merriweather-light-italic;
+    src: url('assets/fonts/Merriweather/Merriweather-LightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: merriweather-regular;
+    src: url('assets/fonts/Merriweather/Merriweather-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

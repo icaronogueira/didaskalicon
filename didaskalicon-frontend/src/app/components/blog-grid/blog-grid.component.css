@@ -1,0 +1,87 @@
+.scroll-container {
+    overflow: auto;
+    height:100%;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+
+}
+
+.article-grid {
+    margin: 0 auto;
+    padding: 2em 0 0 0;
+    height: 100%;
+    width: 90%;
+}
+
+.article-grid-tile {
+    border-radius: 20px;
+    background-size: cover;
+}
+
+.article-grid-tile:hover {
+    border: 1px solid rgb(23, 87, 107);
+}
+
+.article-grid-tile:active {
+    border: 2px solid rgb(23, 87, 107);
+    opacity: 0.8;
+}
+
+.mat-grid-tile-content {
+    position: relative;
+}
+
+.post-info {
+    position: absolute;
+    bottom: 0;
+    height: 30%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 3px;
+}
+
+.post-info .title {
+    width: 90%;
+    border-radius: 5px;
+    margin: 0 5%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0,0,0,0.2);
+    text-overflow: ellipsis;
+    line-height: 10px;
+    
+}
+
+.post-info .title {
+    font-family: 'merriweather-bold';
+    font-size: 8pt;
+    letter-spacing: 0.06em;
+
+}
+
+.post-info .subtitle {
+    font-family: 'merriweather-regular';
+    font-size: 7pt;
+    letter-spacing: 0.06em;
+    
+}
+
+.post-info .date {
+    color: white;
+    font-family: 'inconsolata';
+    font-size: 7pt;
+    letter-spacing: 0.06em;
+}
+
+.post-info .like-dislike{
+    color: white;
+    font-family: 'inconsolata';
+    font-size: 7pt;
+    letter-spacing: 0.06em;
+}

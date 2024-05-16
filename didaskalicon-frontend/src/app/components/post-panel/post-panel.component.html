@@ -1,0 +1,52 @@
+<mat-dialog-content>
+    <!--Capa e título-->
+    <mat-card>
+        <div class="mat-card-titles">
+            <mat-card-title class="title">{{post.title}}</mat-card-title>
+            <mat-card-title class="subtitle">{{post.subtitle}}</mat-card-title>
+        </div>
+        <img mat-card-image src={{post.cover_image_url}} alt="imagem de capa">
+    </mat-card>
+
+    <!--Tags-->
+    <mat-chip-set style="text-align: center">
+        <mat-chip *ngFor="let tag of post.tags" disabled>{{tag}}</mat-chip>
+    </mat-chip-set>
+
+    <!--Data da postagem-->
+    <p style="text-align: center; font-size: 10pt; font-style: italic;">Postado em {{post.date_posted | date:'dd/MMMM/yyyy'}}</p>
+
+    <!--Texto do post-->
+    <div *ngFor="let item of post.content" class="text-div">
+        <ng-container *ngIf="item['type']==='paragraph'">
+            <p>{{item['value']}}</p>
+        </ng-container>
+        <ng-container *ngIf="item['type']==='image_url'">
+            <img [src]="item['value']">
+        </ng-container>
+        <ng-container *ngIf="item['type']==='subheader'">
+            <h2>{{item['value']}}</h2>
+        </ng-container>
+    </div>
+
+    <!--Likes Dislikes-->
+    <div class="likes-dislikes">
+        <button mat-button (click)="like()">Like</button>
+        <span>{{post.likes}}</span>
+        <button mat-button (click)="dislike()">Dislike</button>
+        <span>{{post.dislikes}}</span>
+    </div>
+
+    <!--Leave a comment -->
+    <div class="write-comment-div" style="margin: 5px; font-family: 'merriweather-regular';">
+        <h3>Deixe um comentário</h3>
+        <mat-form-field>
+            <input placeholder="Nome" [(ngModel)]="new_comment_author">
+        </mat-form-field>
+        <mat-form-field>
+            <textarea placeholder="Texto" [(ngModel)]="new_comment_text"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addComment()">Comentar</button>
+    </div>
+    
+</mat-dialog-content>

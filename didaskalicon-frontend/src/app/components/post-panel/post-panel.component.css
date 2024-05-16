@@ -1,0 +1,126 @@
+* {
+    font-family: 'inconsolata';
+    color: gray;
+}
+
+
+:host {
+    height: 100%;
+    display: block;
+}
+
+mat-card {
+    width: 100%;
+}
+
+mat-dialog-content, .mat-mdc-dialog-content{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    max-height: 100%;
+    background-color: black;
+    
+}
+
+img.mat-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.mat-card-titles {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.mat-card-titles .title {
+    font-family: 'merriweather-bold';
+    color: rgb(43, 168, 206);
+    font-weight: 100;
+    font-size: 15pt;
+}
+
+
+.mat-card-titles .subtitle {
+    font-family: 'merriweather-bold';
+    color: gray;
+    font-weight: 60;
+    font-size: 10pt;
+}
+.mat-mdc-chip-set {
+    margin: 5px;
+}
+.mat-mdc-chip {
+    height: 15px !important;
+    font-size: 3pt;
+}
+
+
+.text-div {
+    margin: 10px;
+}
+.text-div p {
+    text-align: justify;
+    font-size: 11pt;
+    letter-spacing: 0.2pt;
+    line-height: 15pt;
+    color: rgb(199, 187, 187);
+}
+.text-div  h2 {
+    text-align: left;
+    font-size: 11pt;
+    font-family: 'merriweather-bold';
+    color: rgb(43, 168, 206);
+}
+.text-div > img {
+    display: flex;
+}
+.text-div  img {
+    max-width: 30%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.likes-dislikes {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    font-family: 'merriweather-regular';
+}
+
+.likes-dislikes button, .likes-dislikes span  {
+    margin-left: 5px;
+}
+
+.write-comment-div {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field {
+    height: 10%;
+}
+
+.mdc-text-field {
+    padding: 0 0 !important;
+}
+.mat-mdc-form-field-infix {
+    padding: 8 8 !important;
+}
+mat-form-field input, mat-form-field textarea {
+    width: 80%;
+    color: black;
+}
+
+.write-comment-div button {
+ width: 40%;
+}
+
+mat-form-field textarea {
+    height: 100%;
+}
