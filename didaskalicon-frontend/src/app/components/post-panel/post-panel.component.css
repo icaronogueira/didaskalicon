@@ -100,27 +100,39 @@ img.mat-card-image {
 .write-comment-div {
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
 }
 
-mat-form-field {
-    height: 10%;
+.write-comment-div mat-form-field {
+    margin-bottom: -1.25em;
+    width: 100%;
 }
 
-.mdc-text-field {
-    padding: 0 0 !important;
-}
-.mat-mdc-form-field-infix {
-    padding: 8 8 !important;
-}
-mat-form-field input, mat-form-field textarea {
-    width: 80%;
-    color: black;
+.write-comment-div mat-form-field input,
+.write-comment-div mat-form-field textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    box-sizing: border-box;
 }
 
 .write-comment-div button {
- width: 40%;
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end;
 }
 
-mat-form-field textarea {
-    height: 100%;
+.write-comment-div button:hover {
+    background-color: #0056b3;
 }

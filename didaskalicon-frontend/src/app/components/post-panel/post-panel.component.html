@@ -40,10 +40,10 @@
     <!--Leave a comment -->
     <div class="write-comment-div" style="margin: 5px; font-family: 'merriweather-regular';">
         <h3>Deixe um comentário</h3>
-        <mat-form-field>
+        <mat-form-field subscriptSizing="dynamic">
             <input placeholder="Nome" [(ngModel)]="new_comment_author">
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field subscriptSizing="dynamic">
             <textarea placeholder="Texto" [(ngModel)]="new_comment_text"></textarea>
         </mat-form-field>
         <button mat-raised-button color="primary" (click)="addComment()">Comentar</button>
