@@ -49,4 +49,12 @@
         <button mat-raised-button color="primary" (click)="addComment()">Comentar</button>
     </div>
     
+    <div class="comment-section">
+        <h2>Comentários</h2>
+        <div class="comment" *ngFor="let comment of comments">
+            <div class="comment-author">{{comment.author}}</div>
+            <div class="comment-text">{{comment.text}}</div>
+            <div class="comment-date">{{comment.date | date:'medium'}}</div>
+        </div>
+    </div>
 </mat-dialog-content>

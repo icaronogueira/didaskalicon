@@ -11,6 +11,11 @@ export class PostPanelComponent implements OnInit{
 
   post:any;
   contents:any;
+  comments: any[] = [
+    { author: 'John Doe', text: 'This is a great article!', date: new Date() },
+    { author: 'Jane Smith', text: 'I found the information very helpful.', date: new Date(2024, 4, 10) }, // Simulate a slightly older comment
+    { author: 'Alice Walker', text: 'I agree! Looking forward to more content.', date: new Date(2024, 4, 12) }, // Simulate an even newer comment
+  ];
   
   new_comment_author: string="";
   new_comment_text: string="";

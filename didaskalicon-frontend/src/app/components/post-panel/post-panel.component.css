@@ -136,3 +136,37 @@ img.mat-card-image {
 .write-comment-div button:hover {
     background-color: #0056b3;
 }
+
+.comment-section {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.comment-section h2 {
+    margin-bottom: 15px;
+    color: rgb(43, 168, 206);
+}
+
+.comment {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #007bff;
+}
+.comment-text {
+    margin-top: 5px;
+    line-height: 1.5;
+}
+.comment-date {
+    margin-top: 10px;
+    text-align: right;
+    font-size: 0.85em;
+    color: #666;
+}
