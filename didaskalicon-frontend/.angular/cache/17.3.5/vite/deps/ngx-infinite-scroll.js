@@ -14,7 +14,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵdirectiveInject
-} from "./chunk-IWZD5LEQ.js";
+} from "./chunk-UC6QHQD3.js";
 import {
   __spreadProps,
   __spreadValues,
@@ -25,7 +25,7 @@ import {
   of,
   tap,
   throttleTime
-} from "./chunk-VDFOJE7E.js";
+} from "./chunk-SXIXOCJ4.js";
 
 // node_modules/ngx-infinite-scroll/fesm2022/ngx-infinite-scroll.mjs
 var _NgxInfiniteScrollService = class _NgxInfiniteScrollService {

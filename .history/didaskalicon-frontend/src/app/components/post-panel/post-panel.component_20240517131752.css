@@ -1,0 +1,179 @@
+* {
+    font-family: 'inconsolata';
+    color: gray;
+}
+
+
+:host {
+    height: 100%;
+    display: block;
+}
+
+mat-card {
+    width: 100%;
+}
+
+mat-dialog-content, .mat-mdc-dialog-content{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    max-height: 100%;
+    background-color: black;
+    
+}
+
+img.mat-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.mat-card-titles {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.mat-card-titles .title {
+    font-family: 'merriweather-bold';
+    color: rgb(43, 168, 206);
+    font-weight: 100;
+    font-size: 15pt;
+}
+
+
+.mat-card-titles .subtitle {
+    font-family: 'merriweather-bold';
+    color: gray;
+    font-weight: 60;
+    font-size: 10pt;
+}
+.mat-mdc-chip-set {
+    margin: 5px;
+}
+.mat-mdc-chip {
+    height: 15px !important;
+    font-size: 3pt;
+}
+
+
+.text-div {
+    margin: 10px;
+}
+.text-div p {
+    text-align: justify;
+    font-size: 11pt;
+    letter-spacing: 0.2pt;
+    line-height: 15pt;
+    color: rgb(199, 187, 187);
+}
+.text-div  h2 {
+    text-align: left;
+    font-size: 11pt;
+    font-family: 'merriweather-bold';
+    color: rgb(43, 168, 206);
+}
+.text-div > img {
+    display: flex;
+}
+.text-div  img {
+    max-width: 30%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.likes-dislikes {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    font-family: 'merriweather-regular';
+}
+
+.likes-dislikes button, .likes-dislikes span  {
+    margin-left: 5px;
+}
+
+.write-comment-div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: solid 1px white;
+    margin: 20px 5px 5px 5px;
+}
+
+.write-comment-div h3 {
+    display: flex5px 5px;
+}
+
+.write-comment-div mat-form-field {
+    margin-bottom: -1.75em;
+    width: 100%;
+}
+
+.write-comment-div mat-form-field input,
+.write-comment-div mat-form-field textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 0px;
+    box-sizing: border-box;
+}
+
+.write-comment-div button {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    margin-top: 10px;
+    background-color: rgb(43, 168, 206);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.write-comment-div button:hover {
+    background-color: rgb(43, 168, 206);
+}
+
+.comment-section {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.comment-section h2 {
+    margin-bottom: 15px;
+    color: rgb(43, 168, 206);
+}
+
+.comment {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: black;
+    border: solid 1px white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.comment-author {
+    font-weight: bold;
+    color: rgb(43, 168, 206);
+}
+.comment-text {
+    margin-top: 5px;
+    line-height: 1.5;
+}
+.comment-date {
+    margin-top: 10px;
+    text-align: right;
+    font-size: 0.85em;
+    color: #666;
+}
