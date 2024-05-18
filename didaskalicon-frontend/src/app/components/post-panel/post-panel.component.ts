@@ -25,6 +25,7 @@ export class PostPanelComponent implements OnInit{
     this.post=this.data;
     console.log('post'+this.post)
     this.apiService.getPostComments(this.post._id).subscribe(comments => {
+      console.log('comments '+ comments)
       this.comments=comments;
     });
     console.log('comments '+ this.comments)

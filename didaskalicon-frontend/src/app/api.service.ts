@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, throwError } from 'rxjs';
+import { Observable, catchError, map, throwError } from 'rxjs';
 import { Post } from './models/post.model';
 
 @Injectable({
@@ -29,7 +29,12 @@ export class ApiService {
   getPostComments(postId:string): Observable<Comment[]> {
     console.log('Calling getPostComments with post._id: '+postId)
     return this.http.get<Comment[]>(`${this.baseUrl}/posts/${postId}/comments`)
-      .pipe(catchError(this.handleError));
+      .pipe(
+        map((response) => {
+          console.log('http get response: ', response);
+          return response;
+        }),
+        catchError(this.handleError));
   }
 
   //Function to get posts with a specific tag

@@ -83,6 +83,7 @@ img.mat-card-image {
 .text-div  img {
     max-width: 30%;
     height: auto;
+    border-radius: 5px;
     margin: 0 auto;
 }
 
