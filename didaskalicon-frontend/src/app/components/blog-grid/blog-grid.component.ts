@@ -50,7 +50,9 @@ export class BlogGridComponent implements OnInit {
     const dialogRef = this.dialog.open(PostPanelComponent, {
       width: '65%',
       height: '90%',
-      data: post
+      data: post,
+      hasBackdrop: true,
+      backdropClass: 'dark-backdrop'
     });
 
     dialogRef.afterClosed().subscribe(result => {
