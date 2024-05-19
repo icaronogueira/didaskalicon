@@ -45,12 +45,12 @@
     <div class="write-comment-div" style="font-family: 'merriweather-regular';">
         <h3>Deixe um comentário</h3>
         <mat-form-field subscriptSizing="dynamic">
-            <input placeholder="Nome" [(ngModel)]="new_comment_author">
+            <input placeholder="Nome" matInput [(ngModel)]="new_comment_author">
         </mat-form-field>
         <mat-form-field subscriptSizing="dynamic">
-            <textarea placeholder="Texto" [(ngModel)]="new_comment_text"></textarea>
+            <textarea placeholder="Texto" matInput [(ngModel)]="new_comment_text"></textarea>
         </mat-form-field>
-        <button mat-button color="primary" (click)="addComment()">Comentar</button>
+        <button mat-button color="primary" (click)="addComment(post._id)">Comentar</button>
     </div>
     
     <div class="comment-section" *ngIf="comments && comments.length>0">

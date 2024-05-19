@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, throwError } from 'rxjs';
 import { Post } from './models/post.model';
+import { Comment } from './models/comments.model';
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +46,12 @@ export class ApiService {
 
   //Function to create a comment
   saveComment(comment: Comment): Observable<any> {
-    return this.http.post(`${this.baseUrl}/comments`, comment)
+    console.log("on api.service.td saveComment() " + comment);
+    return this.http.post(`${this.baseUrl}/comments`, {
+      author: comment.author,
+      text: comment.text,
+      post_id: comment.post_id
+    })
       .pipe(catchError(this.handleError));
   }
   

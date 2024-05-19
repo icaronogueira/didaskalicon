@@ -65,11 +65,14 @@ router.get('/posts/tag/:tag', async (req,res) => {
 //create comment
 router.post('/comments', async (req, res) => {
     
+    const currentDate = new Date();
+
     const comment = new commentModel({
         author: req.body.author,
         text: req.body.text,
-        post_id: new mongo.ObjectId(req.body.post_id)
-    })
+        post_id: new mongo.ObjectId(req.body.post_id),
+        date_posted: currentDate
+    });
 
     try {
         const commentToSave = await comment.save();

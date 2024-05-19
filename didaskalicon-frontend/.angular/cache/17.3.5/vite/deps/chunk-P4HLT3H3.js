@@ -84,6 +84,29 @@ import {
   tap
 } from "./chunk-VDFOJE7E.js";
 
+// node_modules/@angular/cdk/fesm2022/coercion.mjs
+function coerceBooleanProperty(value) {
+  return value != null && `${value}` !== "false";
+}
+function coerceNumberProperty(value, fallbackValue = 0) {
+  return _isNumberValue(value) ? Number(value) : fallbackValue;
+}
+function _isNumberValue(value) {
+  return !isNaN(parseFloat(value)) && !isNaN(Number(value));
+}
+function coerceArray(value) {
+  return Array.isArray(value) ? value : [value];
+}
+function coerceCssPixelValue(value) {
+  if (value == null) {
+    return "";
+  }
+  return typeof value === "string" ? value : `${value}px`;
+}
+function coerceElement(elementOrRef) {
+  return elementOrRef instanceof ElementRef ? elementOrRef.nativeElement : elementOrRef;
+}
+
 // node_modules/@angular/cdk/fesm2022/platform.mjs
 var hasV8BreakIterator;
 try {
@@ -144,6 +167,50 @@ var PlatformModule = _PlatformModule;
     args: [{}]
   }], null, null);
 })();
+var supportedInputTypes;
+var candidateInputTypes = [
+  // `color` must come first. Chrome 56 shows a warning if we change the type to `color` after
+  // first changing it to something else:
+  // The specified value "" does not conform to the required format.
+  // The format is "#rrggbb" where rr, gg, bb are two-digit hexadecimal numbers.
+  "color",
+  "button",
+  "checkbox",
+  "date",
+  "datetime-local",
+  "email",
+  "file",
+  "hidden",
+  "image",
+  "month",
+  "number",
+  "password",
+  "radio",
+  "range",
+  "reset",
+  "search",
+  "submit",
+  "tel",
+  "text",
+  "time",
+  "url",
+  "week"
+];
+function getSupportedInputTypes() {
+  if (supportedInputTypes) {
+    return supportedInputTypes;
+  }
+  if (typeof document !== "object" || !document) {
+    supportedInputTypes = new Set(candidateInputTypes);
+    return supportedInputTypes;
+  }
+  let featureTestInput = document.createElement("input");
+  supportedInputTypes = new Set(candidateInputTypes.filter((value) => {
+    featureTestInput.setAttribute("type", value);
+    return featureTestInput.type === value;
+  }));
+  return supportedInputTypes;
+}
 var supportsPassiveEvents;
 function supportsPassiveEventListeners() {
   if (supportsPassiveEvents == null && typeof window !== "undefined") {
@@ -286,29 +353,6 @@ function hasModifierKey(event, ...modifiers) {
     return modifiers.some((modifier) => event[modifier]);
   }
   return event.altKey || event.shiftKey || event.ctrlKey || event.metaKey;
-}
-
-// node_modules/@angular/cdk/fesm2022/coercion.mjs
-function coerceBooleanProperty(value) {
-  return value != null && `${value}` !== "false";
-}
-function coerceNumberProperty(value, fallbackValue = 0) {
-  return _isNumberValue(value) ? Number(value) : fallbackValue;
-}
-function _isNumberValue(value) {
-  return !isNaN(parseFloat(value)) && !isNaN(Number(value));
-}
-function coerceArray(value) {
-  return Array.isArray(value) ? value : [value];
-}
-function coerceCssPixelValue(value) {
-  if (value == null) {
-    return "";
-  }
-  return typeof value === "string" ? value : `${value}px`;
-}
-function coerceElement(elementOrRef) {
-  return elementOrRef instanceof ElementRef ? elementOrRef.nativeElement : elementOrRef;
 }
 
 // node_modules/@angular/cdk/fesm2022/observers.mjs
@@ -4946,7 +4990,14 @@ var _MatInternalFormField = __MatInternalFormField;
 })();
 
 export {
+  coerceBooleanProperty,
+  coerceNumberProperty,
+  coerceArray,
+  coerceCssPixelValue,
+  coerceElement,
   Platform,
+  getSupportedInputTypes,
+  normalizePassiveListenerOptions,
   RtlScrollAxisType,
   supportsScrollBehavior,
   getRtlScrollAxisType,
@@ -4960,11 +5011,6 @@ export {
   SPACE,
   DELETE,
   hasModifierKey,
-  coerceBooleanProperty,
-  coerceNumberProperty,
-  coerceArray,
-  coerceCssPixelValue,
-  coerceElement,
   ObserversModule,
   FocusKeyManager,
   InteractivityChecker,
@@ -4983,4 +5029,4 @@ export {
   MatRippleModule,
   MatRippleLoader
 };
-//# sourceMappingURL=chunk-IASHURSP.js.map
+//# sourceMappingURL=chunk-P4HLT3H3.js.map

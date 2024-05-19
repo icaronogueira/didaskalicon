@@ -11,6 +11,7 @@ import { SharedMaterialModule } from './modules/shared-material/shared-material.
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { PostPanelComponent } from './components/post-panel/post-panel.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
@@ -31,6 +32,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     SharedMaterialModule,
     MatDialogModule,
     MatIconModule,
+    MatInputModule,
     MatFormFieldModule,
     InfiniteScrollModule,
     MatChipsModule

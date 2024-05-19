@@ -123,17 +123,15 @@ mat-dialog-content, .mat-mdc-dialog-content{
 }
 
 .write-comment-div mat-form-field {
-    margin-bottom: -1.75em;
-    width: 100%;
+    width: 100% !important;
+    margin-bottom: 10px;
+    background-color: black;
 }
+
 
 .write-comment-div mat-form-field input,
 .write-comment-div mat-form-field textarea {
-    width: 100%;
-    border: 1px solid gray;
-    border-radius: 4px;
-    padding: 8px 0px;
-    box-sizing: border-box;
+    width: 100% !important;
 }
 
 .write-comment-div button {

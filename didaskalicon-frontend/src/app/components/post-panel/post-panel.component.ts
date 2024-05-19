@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 import { ApiService } from '../../api.service';
+import { Comment } from '../../models/comments.model';
 
 @Component({
   selector: 'app-post-panel',
@@ -55,8 +56,22 @@ export class PostPanelComponent implements OnInit{
     });
   }
 
-  addComment() {
-    console.log('Add comment button pressed!');
+  addComment(postId: string) {
+    let comment: Comment = {
+      author: this.new_comment_author,
+      text: this.new_comment_text,
+      post_id: postId
+    }
+    console.log("em postPanelComponent. addComment() - comentário sendo enviado :  " + comment);
+    this.apiService.saveComment(comment).subscribe({
+      next: (response) => {
+        console.log('Comment saved sucessfully', response)
+      },
+      error: (error) => {
+        console.error('Error saving comment', error)
+      }
+    });
+    
   }
   
 }
