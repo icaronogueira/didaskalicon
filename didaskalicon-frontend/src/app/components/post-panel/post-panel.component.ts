@@ -62,10 +62,13 @@ export class PostPanelComponent implements OnInit{
       text: this.new_comment_text,
       post_id: postId
     }
+    this.comments.push(comment);
     console.log("em postPanelComponent. addComment() - comentário sendo enviado :  " + comment);
     this.apiService.saveComment(comment).subscribe({
       next: (response) => {
-        console.log('Comment saved sucessfully', response)
+        this.new_comment_author="";
+        this.new_comment_text="";
+        console.log('Comment saved sucessfully', response);
       },
       error: (error) => {
         console.error('Error saving comment', error)
