@@ -14,7 +14,7 @@ mat-card {
 }
 
 mat-dialog-content, .mat-mdc-dialog-content{
-    padding: 0;
+    padding: 0px 20px 20px 20px;
     margin: 0;
     height: 100%;
     max-height: 100%;
@@ -22,7 +22,7 @@ mat-dialog-content, .mat-mdc-dialog-content{
     
 }
 
-img.mat-card-image {
+.cover-image {
     width: 100%;
     height: auto;
 }
@@ -67,7 +67,7 @@ img.mat-card-image {
 .text-div p {
     text-align: justify;
     font-size: 11pt;
-    letter-spacing: 0.2pt;
+    letter-spacing: 0.1pt;
     line-height: 15pt;
     color: rgb(199, 187, 187);
 }
