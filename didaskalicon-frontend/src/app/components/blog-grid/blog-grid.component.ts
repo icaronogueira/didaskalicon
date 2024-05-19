@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Post } from '../../models/post.model';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../../api.service';
@@ -15,6 +15,8 @@ export class BlogGridComponent implements OnInit {
   currentPage: number=1;
   isLoading: boolean=false;
   hasMore: boolean = true;
+
+  @Input() filter:string = "";
 
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
 

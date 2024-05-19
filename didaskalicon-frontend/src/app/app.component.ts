@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 
   showlogo=true;
   title = "Didaskalicon";
+  filter="";
 
   constructor( ) {}
 

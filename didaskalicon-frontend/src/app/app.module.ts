@@ -16,13 +16,15 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { FilterByPipe } from './filter-by.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
     BlogGridComponent,
-    PostPanelComponent
+    PostPanelComponent,
+    FilterByPipe
   ],
   imports: [
     BrowserModule,
