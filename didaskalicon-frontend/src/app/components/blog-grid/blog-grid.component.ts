@@ -48,7 +48,7 @@ export class BlogGridComponent implements OnInit {
 
   onClick(post: any) {
     const dialogRef = this.dialog.open(PostPanelComponent, {
-      width: '65%',
+      width: '75%',
       height: '90%',
       data: post,
       autoFocus: false,

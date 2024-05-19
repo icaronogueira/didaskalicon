@@ -48,6 +48,19 @@ export class ApiService {
     return this.http.post(`${this.baseUrl}/comments`, comment)
       .pipe(catchError(this.handleError));
   }
+  
+  //Function to like a post
+  likePost(postId: string): Observable<any> {
+    return this.http.put<Post>(`${this.baseUrl}/posts/${postId}/like`, {})
+    .pipe(catchError(this.handleError));
+  }
+
+
+  //Function to dislike a post
+  dislikePost(postId: string): Observable<any> {
+    return this.http.put<Post>(`${this.baseUrl}/posts/${postId}/dislike`, {})
+    .pipe(catchError(this.handleError));
+  }
 
   //Error handling function
   private handleError(error: HttpErrorResponse): Observable<never> {

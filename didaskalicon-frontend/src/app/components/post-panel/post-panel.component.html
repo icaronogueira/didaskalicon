@@ -31,11 +31,11 @@
 
     <!--Likes Dislikes-->
     <div class="likes-dislikes">
-        <button mat-button color="primary" (click)="like()">
+        <button mat-button color="primary" (click)="like(post._id)">
             Like
         </button>
         <span>{{post.likes}}</span>
-        <button mat-button color="primary" (click)="dislike()">
+        <button mat-button color="primary" (click)="dislike(post._id)">
             Dislike
         </button>
         <span>{{post.dislikes}}</span>

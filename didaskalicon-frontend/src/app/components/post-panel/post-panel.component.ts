@@ -31,12 +31,28 @@ export class PostPanelComponent implements OnInit{
     console.log('comments '+ this.comments)
   }
 
-  like() {
-    console.log('Like button pressed!');
+  like(postId: string): void {
+    this.apiService.likePost(postId).subscribe({
+      next: (response) => {
+        this.post=response;
+        console.log('Post liked sucessfully', response)
+      },
+      error: (error) => {
+        console.error('Error liking post', error)
+      }
+    });
   }
 
-  dislike() {
-    console.log('Dislike button pressed!');
+  dislike(postId: string): void {
+    this.apiService.dislikePost(postId).subscribe({
+      next: (response) => {
+        this.post=response;
+        console.log('Post disliked sucessfully', response)
+      },
+      error: (error) => {
+        console.error('Error disliking post', error)
+      }
+    });
   }
 
   addComment() {
