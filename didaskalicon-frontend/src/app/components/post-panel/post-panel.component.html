@@ -29,15 +29,17 @@
         </ng-container>
     </div>
 
+    <div class="instagram-logo-placeholder">
+        <a class="instagram-link" href="https://www.instagram.com/didaskalicon" target="_blank">
+            <img class="instagram-icon" src="../assets/instagram.ico" alt="Instagram Icon">&#64;didaskalicon
+        </a>
+    </div>
+
     <!--Likes Dislikes-->
     <div class="likes-dislikes">
-        <button mat-button color="primary" (click)="like(post._id)">
-            Like
-        </button>
+        <img src="../../../assets/thumb_up.png" (click)="like(post._id)">
         <span>{{post.likes}}</span>
-        <button mat-button color="primary" (click)="dislike(post._id)">
-            Dislike
-        </button>
+        <img src="../../../assets/thumbs_down.png" (click)="dislike(post._id)">
         <span>{{post.dislikes}}</span>
     </div>
 

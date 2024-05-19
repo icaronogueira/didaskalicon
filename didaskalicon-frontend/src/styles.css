@@ -84,7 +84,7 @@
     font-style: normal;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Arial, sans-serif; }
 
 
 .cdk-overlay-backdrop.cdk-overlay-backdrop-showing {

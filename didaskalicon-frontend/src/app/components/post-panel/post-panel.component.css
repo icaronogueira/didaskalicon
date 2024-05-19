@@ -1,5 +1,5 @@
 * {
-    font-family: 'inconsolata';
+    font-family: Arial, Helvetica, sans-serif;
     color: gray;
 }
 
@@ -14,7 +14,7 @@ mat-card {
 }
 
 mat-dialog-content, .mat-mdc-dialog-content{
-    padding: 0px 20px 20px 20px;
+    padding: 0px 50px 20px 50px;
     margin: 0;
     height: 100%;
     max-height: 100%;
@@ -87,6 +87,24 @@ mat-dialog-content, .mat-mdc-dialog-content{
     margin: 0 auto;
 }
 
+.instagram-logo-placeholder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px 40px 0px;
+    font-size: 10pt;
+    align-items: center;
+}
+
+.instagram-logo-placeholder a {
+    display: flex;
+    align-items: center;
+}
+
+.instagram-logo-placeholder .instagram-icon{
+    width: 10%;
+}
+
 .likes-dislikes {
     display: flex;
     justify-content: right;
@@ -94,13 +112,11 @@ mat-dialog-content, .mat-mdc-dialog-content{
     font-family: 'merriweather-regular';
 }
 
-.likes-dislikes button {
+.likes-dislikes img  {
+    width: 3%;
     margin-left: 5px;
-    background-color: rgb(43, 168, 206);
-    color: white;
-    border-radius: 4px;
     border: none;
-    padding: 5px 10px;
+    align-content: center;
 }
 
 .likes-dislikes span  {
@@ -118,8 +134,9 @@ mat-dialog-content, .mat-mdc-dialog-content{
 }
 
 .write-comment-div h3 {
-    font-size: 1em;
-    color:  rgb(43, 168, 206);;
+    font-size: 11pt;
+    font-family: 'merriweather-bold';
+    color: rgb(43, 168, 206);
 }
 
 .write-comment-div mat-form-field {
@@ -159,8 +176,9 @@ mat-dialog-content, .mat-mdc-dialog-content{
 
 .comment-section h2 {
     margin-bottom: 15px;
+    font-size: 11pt;
+    font-family: 'merriweather-bold';
     color: rgb(43, 168, 206);
-    font-size: 1em;
 }
 
 .comment {
