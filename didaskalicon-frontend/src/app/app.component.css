@@ -89,3 +89,32 @@ html, body {
     height: 100vh;
 }
 /* fonts for the articles? Open Sans, sans-serif*/
+
+
+.top-section {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.search-input {
+    margin-right: 10px;
+    border-radius: 4px;
+    width: 100%;
+    color: white;
+    font-family: 'inconsolata';
+    background-color: black;
+    font-style: italic;
+}
+
+.search-icon {
+    color: white;
+    font-size: 15px;
+    align-content: center;
+}
