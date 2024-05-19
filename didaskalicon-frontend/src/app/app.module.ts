@@ -12,6 +12,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { PostPanelComponent } from './components/post-panel/post-panel.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
@@ -29,6 +30,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     HttpClientModule,
     SharedMaterialModule,
     MatDialogModule,
+    MatIconModule,
     MatFormFieldModule,
     InfiniteScrollModule,
     MatChipsModule

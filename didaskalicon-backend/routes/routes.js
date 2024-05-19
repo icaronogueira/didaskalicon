@@ -81,5 +81,53 @@ router.post('/comments', async (req, res) => {
     
 })
 
+//Route to like a post
+router.put('/posts/:id/like', async (req, res) => {
+    const postId = req.params.id;
+    
+    try {
+        let post = await postModel.findById(postId);
+
+        if (!post) {
+            return res.status(404).json({message: "Post not found"});
+        }
+
+        post.likes++;
+
+        post = await post.save();
+
+        res.json(post);
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({message: "Error liking post"})
+    }
+});
+
+//Route to dislike a post
+router.put('/posts/:id/dislike', async (req,res) => {
+    const postId = req.params.id;
+
+    try {
+        let post = await postModel.findById(postId);
+
+        if (!post) {
+            return res.status(404).json({message: 'Post not found!'});
+        }
+
+        post.dislikes++;
+
+        post = await post.save();
+
+        res.json(post);
+    }
+    catch (error) {
+        console.error(error);
+        res.status(500).json({message: 'Error disliking post!'});
+    }
+});
+
+
+
 
 module.exports = router;

@@ -31,9 +31,13 @@
 
     <!--Likes Dislikes-->
     <div class="likes-dislikes">
-        <button mat-button (click)="like()">Like</button>
+        <button mat-button color="primary" (click)="like()">
+            Like
+        </button>
         <span>{{post.likes}}</span>
-        <button mat-button (click)="dislike()">Dislike</button>
+        <button mat-button color="primary" (click)="dislike()">
+            Dislike
+        </button>
         <span>{{post.dislikes}}</span>
     </div>
 
@@ -46,7 +50,7 @@
         <mat-form-field subscriptSizing="dynamic">
             <textarea placeholder="Texto" [(ngModel)]="new_comment_text"></textarea>
         </mat-form-field>
-        <button mat-raised-button color="primary" (click)="addComment()">Comentar</button>
+        <button mat-button color="primary" (click)="addComment()">Comentar</button>
     </div>
     
     <div class="comment-section" *ngIf="comments && comments.length>0">

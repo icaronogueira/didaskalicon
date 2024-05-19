@@ -51,7 +51,7 @@ export class BlogGridComponent implements OnInit {
       width: '65%',
       height: '90%',
       data: post,
-      hasBackdrop: true,
+      autoFocus: false,
       backdropClass: 'dark-backdrop'
     });
 

@@ -94,10 +94,18 @@ img.mat-card-image {
     font-family: 'merriweather-regular';
 }
 
-.likes-dislikes button, .likes-dislikes span  {
+.likes-dislikes button {
     margin-left: 5px;
+    background-color: rgb(43, 168, 206);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 5px 10px;
 }
 
+.likes-dislikes span  {
+    margin-left: 5px;
+}
 .write-comment-div {
     display: flex;
     flex-direction: column;
