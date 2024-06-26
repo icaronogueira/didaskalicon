@@ -9,7 +9,7 @@ import { Comment } from './models/comments.model';
 })
 export class ApiService {
 
-  private baseUrl = 'http://localhost:3000/api';
+  private baseUrl = 'https://didaskalicon-api.onrender.com/api';
 
   constructor(private http: HttpClient) { }
 
