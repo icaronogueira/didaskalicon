@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { Post } from '../../models/post.model';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from '../../api.service';
@@ -14,17 +14,22 @@ export class BlogGridComponent implements OnInit {
   posts: Post[] =[];
   currentPage: number=1;
   isLoading: boolean=false;
+  cols: number=1;
+  rowHeight: string="";
   hasMore: boolean = true;
 
   @Input() filter:string = "";
 
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
 
-  constructor(private apiService: ApiService, private dialog: MatDialog) {}
+  constructor(private apiService: ApiService, private dialog: MatDialog) {
+    this.onResize();
+  }
 
   ngOnInit(): void {
     this.getPosts(this.currentPage);
     console.log("on ngOnInit()");
+    this.onResize();
   }
 
   getPosts(page:number) {
@@ -64,6 +69,17 @@ export class BlogGridComponent implements OnInit {
     );
   }
 
-
-
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 480) {
+      this.cols = 1;
+      this.rowHeight = "2:3";
+    } else if (screenWidth <= 768) {
+      this.cols = 2;
+      this.rowHeight = "2:3";
+    } else {this.cols = 5;
+      this.rowHeight = "3:2";
+    }
+  }
 }

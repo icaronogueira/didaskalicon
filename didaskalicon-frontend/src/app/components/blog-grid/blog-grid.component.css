@@ -1,6 +1,6 @@
 .scroll-container {
     overflow: auto;
-    height:100%;
+    height: 100%;
 
     ::-webkit-scrollbar {
         width: 10px;
@@ -12,11 +12,14 @@
     padding: 2em 0 0 0;
     height: 100%;
     width: 90%;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
 }
 
 .article-grid-tile {
     border-radius: 20px;
     background-size: cover;
+    background-position: center; /* Ensure background images are centered */
 }
 
 .article-grid-tile:hover {
@@ -53,33 +56,55 @@
     background-color: rgba(0,0,0,0.3);
     text-overflow: ellipsis;
     line-height: 10px;
-    
 }
 
 .post-info .title {
     font-family: 'merriweather-bold';
-    font-size: 8pt;
+    font-size: 1em; /* Changed from pt to em for responsive sizing */
     letter-spacing: 0.06em;
-
 }
 
 .post-info .subtitle {
     font-family: 'merriweather-regular';
-    font-size: 7pt;
+    font-size: 0.875em; /* Changed from pt to em for responsive sizing */
     letter-spacing: 0.06em;
-    
 }
 
 .post-info .date {
     color: white;
     font-family: 'inconsolata';
-    font-size: 7pt;
+    font-size: 0.875em; /* Changed from pt to em for responsive sizing */
     letter-spacing: 0.06em;
 }
 
-.post-info .like-dislike{
+.post-info .like-dislike {
     color: white;
     font-family: 'inconsolata';
-    font-size: 7pt;
+    font-size: 0.875em; /* Changed from pt to em for responsive sizing */
     letter-spacing: 0.06em;
+}
+
+
+@media (max-width: 768px) {
+    .article-grid {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+
+    .article-grid-tile {
+        margin-bottom: 1em; /* Add space between tiles */
+    }
+
+    .post-info .title, .post-info .subtitle, .post-info .date, .post-info .like-dislike {
+        font-size: 0.75em; /* Smaller font size for tablets and phones */
+    }
+}
+
+@media (max-width: 480px) {
+    .article-grid-tile {
+        margin-bottom: 1em; /* Add space between tiles */
+    }
+
+    .post-info .title, .post-info .subtitle, .post-info .date, .post-info .like-dislike {
+        font-size: 0.7em; /* Smaller font size for very small screens */
+    }
 }

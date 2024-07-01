@@ -1,5 +1,5 @@
 <div #scrollContainer class="scroll-container"  (scroll)="onScroll()">
-<mat-grid-list class="article-grid" cols="5" rowHeight="3:2" gutterSize ="2em">
+<mat-grid-list class="article-grid" [cols]="cols" [rowHeight]="rowHeight" gutterSize ="2em">
 
     <mat-grid-tile *ngFor="let post of posts | filterBy: filter" class="article-grid-tile"
                     style="background-image: url('{{post.cover_image_url}}');"

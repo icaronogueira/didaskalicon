@@ -207,3 +207,38 @@ mat-dialog-content, .mat-mdc-dialog-content{
     font-size: 0.5;
     color: #666;
 }
+
+
+@media (max-width: 480px) {
+    mat-dialog-content, .mat-mdc-dialog-content {
+        padding: 0px 10px 10px 10px;
+    }
+
+    .mat-card-titles .title {
+        font-size: 1em;
+    }
+
+    .mat-card-titles .subtitle {
+        font-size: 0.8em;
+    }
+
+    .post-date {
+        font-size: 0.8em;
+    }
+
+    .text-div p, .text-div h2 {
+        font-size: 0.8em;
+    }
+
+    .instagram-logo-placeholder {
+        font-size: 0.8em;
+    }
+
+    .write-comment-div h3 {
+        font-size: 0.8em;
+    }
+
+    .comment-section h2 {
+        font-size: 0.8em;
+    }
+}

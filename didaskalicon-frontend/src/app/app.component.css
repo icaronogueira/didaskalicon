@@ -117,3 +117,18 @@ html, body {
     font-size: 15px;
     align-content: center;
 }
+
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em; /* Smaller font size for tablets and phones */
+    }
+
+    .subtitle {
+        font-size: 1em; /* Smaller font size for tablets and phones */
+    }
+
+    .search-bar {
+        width: 80%; /* Adjusted for smaller screens */
+    }
+}
