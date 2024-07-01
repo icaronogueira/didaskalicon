@@ -60,7 +60,7 @@
 
 .post-info .title {
     font-family: 'merriweather-bold';
-    font-size: 1em; /* Changed from pt to em for responsive sizing */
+    font-size: 0.7em; /* Changed from pt to em for responsive sizing */
     letter-spacing: 0.06em;
 }
 
